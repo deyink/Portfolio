@@ -1,0 +1,141 @@
+nav{
+    height: 11vh;
+    padding-top: auto;
+    padding-bottom: auto;
+    background-color:rgb(8, 7, 7);
+    color: white;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    justify-content: space-between;
+}
+nav .logo{
+    padding: 20px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: 700;
+   
+}
+
+
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 60%;
+}
+@media(max-width:990px){
+    nav ul li:hover::after{
+    width: 40%;
+    }
+}
+
+.logo::before {
+    margin-left: auto;
+  }
+  
+  .logo::after, .logo::before {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: white;
+    display: block;
+    transition: 0.5s;
+  }
+  
+  .logo:hover::after, .logo:hover::before {
+    width: 100%;
+  }
+
+.title{
+    color: blue;
+    font-size: 1.5rem;
+}
+nav ul{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin-right: 10%;
+}
+.navlist ul li{
+    list-style: none;
+    cursor: pointer;
+}
+ .navlist a{
+    text-decoration: none;
+    color: white;
+    font-size: .95rem;
+    
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+nav img{
+display: block;
+margin: 15px;
+}
+.close-btn, .menu-btn {
+    display: none;
+}
+.navlist{
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+@media(min-width:990px){
+    .navlist{
+        margin-right: 10rem;
+        }
+}
+
+
+
+
+@media (max-width: 990px){
+
+    .navlist{
+        position: absolute;
+        width: 60%;
+        right: -600px;
+        height: 100vh;
+        background-color: black;
+        transition: 0.65s ease-in-out;
+       
+    
+    }
+    .navlist ul{
+        display:flex ;
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .close-btn{
+        display: flex;
+    }
+    .menu-btn{
+        display: flex;
+        margin-top: auto;
+        margin-bottom: auto;
+      
+    
+    }
+   
+   
+}
+   
